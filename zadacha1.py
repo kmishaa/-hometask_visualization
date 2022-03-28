@@ -1,0 +1,6 @@
+sum_bills = tips.groupby("day")['total_bill'].apply(lambda x: x.sum())
+plt.plot(sum_bills)
+plt.plot(sum_bills, color = 'red', marker = 'o')
+plt.title('bills per day')
+_ = plt.xlabel('days')
+_ = plt.ylabel('bills sum')
